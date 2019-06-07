@@ -5,25 +5,25 @@ Rough hack to connect a Midea (or compatible) aircon with Openhab.
 WIP.
 
 All credit to:
--https://github.com/yitsushi/midea-air-condition for reverse engineering the protocol
--and https://github.com/NeoAcheron/midea-ac-py for porting it to python
--and https://github.com/bricky/midea-openhab for integration with Openhab
+- https://github.com/yitsushi/midea-air-condition for reverse engineering the protocol
+- and https://github.com/NeoAcheron/midea-ac-py for porting it to python
+- and https://github.com/bricky/midea-openhab for integration with Openhab
 
 # Configuration
 
 ## Settings
 
--Copy file
+- Copy file
 ```
 cp settings.sample.py settings.py
 ```
 
+- Set parameters
 ```
--Set parameters:
 APPKEY = '3742e9e5842d4ad59c2db887e12449f9'  # from android application or any other working
 EMAIL = ''                                   # your registered email
 PASSWORD = ''                                # email to account
-AIRCONS = ('Name1', 'Name2')                 # tuple of aircons you want to sync
+AIRCONS = ('Name1', 'Name2')                 # tuple of aircons you want to sync as configured names in App/Cloud
 OH_URL = 'http://192.168.1.2:8080'           # url of your openhab server
 
 MIDEA_POLL_FREQ_SECS = 900
@@ -32,7 +32,7 @@ OPENHAB_POLL_FREQ_SECS = 15
 
 ## Openhab
 
-For `Name1` (as set above), for `Name2` and other just rename.
+For `Name1` (as set above) as below, for `Name2` and other just rename `Name1` with `Name2` accordingly.
 
 ### Items
 
